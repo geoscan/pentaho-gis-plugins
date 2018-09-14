@@ -32,9 +32,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   </build>
 
   <repositories>
+    <!-- Local repository -->
     <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
+      <id>local-maven-repo</id>
+      <name>Local Maven Repo</name>
+      <url>file://${project.basedir}/../local-maven-repo</url>
     </repository>
   </repositories>
 
@@ -44,10 +46,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       <artifactId>jts-core</artifactId>
       <version>1.14.0</version>
     </dependency>
+    <!-- In the local repository -->
     <dependency>
-      <groupId>com.github.don-vip</groupId>
-      <artifactId>kabeja</artifactId>
-      <version>master-SNAPSHOT</version>
+      <groupId>org.kabeja</groupId>
+       <artifactId>kabeja</artifactId>
+       <version>0.4</version>
     </dependency>
   </dependencies>
 
